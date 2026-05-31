@@ -21,7 +21,7 @@ import java.time.LocalDateTime;
 public class Loan {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer lId;
+    private Integer loanId;
 
     @ManyToOne
     @JoinColumn(name = "account_id")

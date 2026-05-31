@@ -21,8 +21,8 @@ public class LoanServiceImpl implements LoanService{
     }
 
     @Override
-    public Loan getLoanById(Integer lId) {
-        return loanRepository.findById(lId).orElse(null);
+    public Loan getLoanById(Integer loanId) {
+        return loanRepository.findById(loanId).orElse(null);
     }
 
     @Override
@@ -56,8 +56,8 @@ public class LoanServiceImpl implements LoanService{
     }
 
     @Override
-    public Boolean deleteLoan(Integer lId) {
-         loanRepository.deleteById(lId);
+    public Boolean deleteLoan(Integer loanId) {
+         loanRepository.deleteById(loanId);
          return true;
     }
 }

@@ -30,13 +30,13 @@ public class LoanController {
     }
 
     @DeleteMapping("/{lId}")
-    public ResponseEntity<Boolean> deleteLoan(@PathVariable Integer lId){
-     return new ResponseEntity<>(loanService.deleteLoan(lId),HttpStatus.OK);
+    public ResponseEntity<Boolean> deleteLoan(@PathVariable Integer loanId){
+     return new ResponseEntity<>(loanService.deleteLoan(loanId),HttpStatus.OK);
     }
 
     @GetMapping("/{lId}")
-    public ResponseEntity<Loan> getLoanById(@PathVariable Integer lId){
-        return new ResponseEntity<>(loanService.getLoanById(lId),HttpStatus.OK);
+    public ResponseEntity<Loan> getLoanById(@PathVariable Integer loanId){
+        return new ResponseEntity<>(loanService.getLoanById(loanId),HttpStatus.OK);
     }
 
     @GetMapping("/account/{accountId}")
