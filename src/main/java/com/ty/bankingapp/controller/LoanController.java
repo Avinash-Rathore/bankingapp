@@ -1,6 +1,5 @@
 package com.ty.bankingapp.controller;
 
-import com.ty.bankingapp.entity.Account;
 import com.ty.bankingapp.entity.Loan;
 import com.ty.bankingapp.enums.LoanStatus;
 import com.ty.bankingapp.enums.LoanType;
