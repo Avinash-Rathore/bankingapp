@@ -2,11 +2,19 @@ package com.ty.bankingapp.entity;
 
 import com.ty.bankingapp.enums.StatementFormat;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Entity
 @Table(name = "bank_statement")
 public class BankStatement {
@@ -16,7 +24,7 @@ public class BankStatement {
 
     @ManyToOne
     @JoinColumn(name = "account_id")
-    private Account accountId;
+    private Account account;
 
     private LocalDate fromDate;
 
@@ -26,6 +34,7 @@ public class BankStatement {
 
     private Double closingBal;
 
+    @Enumerated(EnumType.STRING)
     private StatementFormat format;
 
     @CreationTimestamp
