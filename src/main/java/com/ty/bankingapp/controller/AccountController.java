@@ -47,5 +47,4 @@ public class AccountController {
     public ResponseEntity<Boolean> deleteAccount(@PathVariable Integer accountId){
         return new ResponseEntity<>(accountService.deleteAccount(accountId),HttpStatus.OK);
     }
-
 }

@@ -25,7 +25,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public List<Account> findByUserId(Integer userId) {
-        return accountRepository.findByUser_UId(userId);
+        return accountRepository.findByUser_uId(userId);
     }
 
     @Override

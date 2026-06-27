@@ -11,6 +11,6 @@ public interface AccountRepository extends JpaRepository<Account,Integer> {
 
     Account findByAcno(String acno);
 
-    List<Account> findByUser_UId(Integer uId);
+    List<Account> findByUser_uId(Integer uId);
 
 }
